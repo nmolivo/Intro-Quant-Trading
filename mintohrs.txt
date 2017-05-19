@@ -1,0 +1,32 @@
+function minstohrs(minsum) {
+  
+  var hours = Math.floor(minsum/60);
+  var minutes = Math.floor(60*(minsum/60- Math.floor(minsum/60)));
+  var seconds = Math.floor(60*(minutes/60-Math.floor(minutes/60)));
+  
+  shours = hours.toString();
+  sminutes = minutes.toString();
+  sseconds = seconds.toString();
+  
+    if (shours.length < 2) {
+    var hrs = "0"+shours;
+    } else {
+      var hrs = shours;
+    }
+  
+    if (sminutes.length < 2) {
+    var mins = "0"+sminutes;
+    } else {
+      var mins = sminutes;
+    }
+  
+    if (sseconds.length <2 ) {
+    var secs = "0"+sseconds;
+    } else {
+      var secs = sseconds;
+    }
+  
+  
+  return hrs+":"+mins+":"+secs;
+  
+}
